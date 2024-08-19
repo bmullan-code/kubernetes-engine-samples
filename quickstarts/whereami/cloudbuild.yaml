@@ -15,7 +15,8 @@
 # This file and other cloudbuild.yaml files are used to ensure that
 # our public Docker images such as us-docker.pkg.dev/google-samples/containers/gke/whereami:v1.2.2
 # are rebuilt and updated upon changes to the repository.
-
+options:
+  logging: CLOUD_LOGGING_ONLY
 steps:
 - name: 'gcr.io/cloud-builders/docker'
   args:
