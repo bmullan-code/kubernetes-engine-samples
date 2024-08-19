@@ -22,6 +22,8 @@ steps:
   args:
     - 'build'
     - '-t'
+    - 'gcr.io/qwiklabs-gcp-02-279e0d30f08a/cepf-app-mod-repo/whereami:v1.2.22'
+    - '-t'
     - 'gcr.io/google-samples/whereami:v1.2.22'
     - '-t'
     - 'us-docker.pkg.dev/google-samples/containers/gke/whereami:v1.2.22'
@@ -40,9 +42,11 @@ steps:
     helm push whereami-1.2.22.tgz oci://us-docker.pkg.dev/qwiklabs-gcp-02-279e0d30f08a/cepf-app-mod-repo/charts
 
 images:
-  - 'gcr.io/google-samples/whereami:v1.2.22'
-  - 'us-docker.pkg.dev/google-samples/containers/gke/whereami:v1.2.22'
-  - 'europe-docker.pkg.dev/google-samples/containers/gke/whereami:v1.2.22'
+  - 'gcr.io/qwiklabs-gcp-02-279e0d30f08a/cepf-app-mod-repo/whereami:v1.2.22'
+
+  # - 'gcr.io/google-samples/whereami:v1.2.22'
+  # - 'us-docker.pkg.dev/google-samples/containers/gke/whereami:v1.2.22'
+  # - 'europe-docker.pkg.dev/google-samples/containers/gke/whereami:v1.2.22'
   # - 'us-docker.pkg.dev/qwiklabs-gcp-02-279e0d30f08a/cepf-app-mod-repo/whereami:v1.2.22'
   # - 'europe-docker.pkg.dev/qwiklabs-gcp-02-279e0d30f08a/cepf-app-mod-repo/whereami:v1.2.22'
   
